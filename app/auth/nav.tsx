@@ -3,6 +3,7 @@ import React from 'react';
 import Login from './Login';
 import {getServerSession} from 'next-auth/next';
 import { authOptions } from '../../pages/api/auth/[...nextauth]';
+import Logged from './Logged';
 
 type Props = {};
 
@@ -16,8 +17,8 @@ async function Nav({}: Props) {
 			</Link>
 			<ul className='flex items-center gap-6'>
 				{!session?.user && <Login />}
-                {session?.user?.name && <h1>{session.user.name}</h1>}
-			</ul>
+                {session?.user?.name && <Logged image={session.user?.image || ''} />}
+			</ul> 
 		</nav>
 	);
 }

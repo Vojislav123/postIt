@@ -1,0 +1,3 @@
+type loggedProps = {
+    image: string
+};
