@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import Login from './Login';
+import Login from './auth/Login';
 import {getServerSession} from 'next-auth/next';
-import { authOptions } from '../../pages/api/auth/[...nextauth]';
-import Logged from './Logged';
+import { authOptions } from '../pages/api/auth/[...nextauth]';
+import Logged from './auth/Logged';
 
 type Props = {};
 
